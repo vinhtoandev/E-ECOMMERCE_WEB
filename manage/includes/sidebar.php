@@ -37,23 +37,23 @@
             class="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseTwo"
+            data-target="#collapseOne"
             aria-expanded="true"
-            aria-controls="collapseTwo"
+            aria-controls="collapseOne"
           >
             <i class="fa-solid fa-list"></i>
-            <span>カテゴリ</span>
+            <span>BRAND</span>
           </a>
           <div
-            id="collapseTwo"
+            id="collapseOne"
             class="collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="collapseOne"
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Custom Components:</h6>
-              <a class="collapse-item" href="buttons.html">Buttons</a>
-              <a class="collapse-item" href="cards.html">Cards</a>
+              <a class="collapse-item" href="./listbrands.php">List</a>
+              <a class="collapse-item" href="./listcats.php">Add</a>
             </div>
           </div>
         </li>
