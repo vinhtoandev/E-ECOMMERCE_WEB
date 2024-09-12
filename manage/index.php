@@ -12,9 +12,13 @@
     //     header("Location: $clean_url");
     //     exit();
     // }
-    require("libs/DController.php");
+
     require("libs/main.php");
     require("libs/Load.php");
+    require("libs/DController.php");
+    require("libs/Database.php");
+    require("libs/DModel.php");
+    
 
 
     $url = isset($_GET['url']) ? $_GET['url'] : NULL;
@@ -25,7 +29,7 @@
       unset($url);
     }
     if (isset($url[0])) {
-      echo $url[0].'.php';
+      // echo $url[0].'.php';
       include_once('controllers/'. $url[0] .'.php');
       $ctlr = new $url[0]();
       if(isset($url[2])) {
@@ -40,9 +44,10 @@
       }
     }
     else{
-      include_once('controllers/index.php');
-      $index = new index() ;
-      $index->homepage();
+      include_once('controllers/brands.php');
+      $brand = new brands();
+      $brand->listBrands();
+      
     }
 
     
