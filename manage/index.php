@@ -44,9 +44,7 @@
       }
     }
     else{
-      include_once('controllers/brands.php');
-      $brand = new brands();
-      $brand->listBrands();
+      
       
     }
 

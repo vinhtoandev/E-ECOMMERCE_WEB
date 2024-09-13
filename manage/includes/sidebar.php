@@ -52,8 +52,8 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Custom Components:</h6>
-              <a class="collapse-item" href="./listbrands.php">List</a>
-              <a class="collapse-item" href="./listcats.php">Add</a>
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=brands/listBrands">List</a>
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php">Add</a>
             </div>
           </div>
         </li>

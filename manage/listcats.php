@@ -23,8 +23,7 @@
                             <th>name</th>
                             <th>slug</th>
                             <th>status</th>
-                            <th>created_at</th>
-                            <th>updated_ad</th>
+                            
                         </tr>
                     </thead>
                     <tfoot>
@@ -33,8 +32,7 @@
                             <th>name</th>
                             <th>slug</th>
                             <th>status</th>
-                            <th>created_at</th>
-                            <th>updated_ad</th>
+                            
                         </tr>
                     </tfoot>
                     <tbody>
@@ -49,8 +47,7 @@
                                     <td><?=$row['name']?></td>
                                     <td><?=$row['slug']?></td>
                                     <td><?=$row['status']?></td>
-                                    <td><?=$row['create_at']?></td>
-                                    <td><?=$row['updated_at']?></td>
+                                    
                                 </tr>
                     <?php
                         }
