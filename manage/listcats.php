@@ -1,16 +1,5 @@
 
-
-
-    <div>brand</div>
-    <?php
-      require("../db/connect.php");
-      $querry = "select * from brands order by name";
-      $result = mysqli_query($conn, $querry);
-      while ($row = mysqli_fetch_assoc($result)){
-        echo $row['name'];
-      }
-    ?>
-    <div class="card shadow mb-4">
+<div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
         </div>
@@ -37,16 +26,14 @@
                     </tfoot>
                     <tbody>
                     <?php
-                        require("../db/connect.php");
-                        $querry = "select * from brands order by name";
-                        $result = mysqli_query($conn, $querry);
-                        while ($row = mysqli_fetch_assoc($result)){
+                        foreach($data['category'] as $key => $value) {
+                        
                     ?>
                                 <tr>
-                                    <td><?=$row['id']?></td>
-                                    <td><?=$row['name']?></td>
-                                    <td><?=$row['slug']?></td>
-                                    <td><?=$row['status']?></td>
+                                    <td><?=$value['id']?></td>
+                                    <td><?=$value['name']?></td>
+                                    <td><?=$value['slug']?></td>
+                                    <td><?=$value['status']?></td>
                                     
                                 </tr>
                     <?php

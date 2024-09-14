@@ -4,14 +4,12 @@
             $data = array();
             parent::__construct();
         }
-        public function show($id){
-            echo "css".$id;
+        public function show(){
+            echo "css";
+            
         }
         public function listBrands(){
-            
-            // $homemodel = $this->load->model("homemodel");
-            // $data['category'] = $homemodel->category();
-            // $this->load->view('listbrands', $data); 
+        
             $table = "brands";
             
             $brandmodel = $this->load->model("brandmodel");
@@ -23,14 +21,21 @@
         }
         public function insertBrand(){
             
-            $table = "brands";
+            
             $brandmodel = $this->load->model("brandmodel");
+            $name = $_POST["name"];
+            $slug = $_POST["slug"];
+            $status = $_POST["status"];
             $data['brand'] = array(
-                "name" => "hp",
-                "slug" => "h_p",
-                "status"=> "Active"
+                "name" => $name,
+                "slug" => $slug,
+                "status"=> $status
             );
-            $brandmodel->insertBrand($table,$data);
+            $brandmodel->insertBrand($data);
+            
+        }
+        public function addBrands(){
+            $this->load->view("addbrands");
         }
     }
 ?>

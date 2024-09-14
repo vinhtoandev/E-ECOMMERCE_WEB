@@ -51,9 +51,9 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Custom Components:</h6>
+              <!-- <h6 class="collapse-header">Custom Components:</h6> -->
               <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=brands/listBrands">List</a>
-              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php">Add</a>
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=brands/addBrands">Add</a>
             </div>
           </div>
         </li>
@@ -67,7 +67,7 @@
             aria-controls="collapseTwo"
           >
             <i class="fa-solid fa-calendar"></i>
-            <span>商品</span>
+            <span>Category</span>
           </a>
           <div
             id="collapseTwo"
@@ -76,9 +76,9 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Custom Components:</h6>
-              <a class="collapse-item" href="buttons.html">Buttons</a>
-              <a class="collapse-item" href="cards.html">Cards</a>
+              <!-- <h6 class="collapse-header">Custom Components:</h6> -->
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=categories/listCategory">list</a>
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=categories/addCategories">add</a>
             </div>
           </div>
         </li>
@@ -87,17 +87,17 @@
             class="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseTwo"
+            data-target="#collapseThree"
             aria-expanded="true"
-            aria-controls="collapseTwo"
+            aria-controls="collapseThree"
           >
             <i class="fa-solid fa-table-list"></i>
             <span>注文</span>
           </a>
           <div
-            id="collapseTwo"
+            id="collapseThree"
             class="collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="headingThree"
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
