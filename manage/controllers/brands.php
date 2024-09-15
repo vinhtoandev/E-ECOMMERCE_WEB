@@ -19,9 +19,10 @@
         public function getBrandById($id){
 
         }
-        public function insertBrand(){
+        
+        public function insert(){
             
-            
+            $table = "brands";
             $brandmodel = $this->load->model("brandmodel");
             $name = $_POST["name"];
             $slug = $_POST["slug"];
@@ -31,7 +32,7 @@
                 "slug" => $slug,
                 "status"=> $status
             );
-            $brandmodel->insertBrand($data);
+            $brandmodel->insert($table,$data);
             
         }
         public function addBrands(){

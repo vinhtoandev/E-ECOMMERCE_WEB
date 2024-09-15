@@ -6,8 +6,11 @@
         public function getAllProduct($table){
             return $this->db->select($table);
         }
-        public function insertProduct($data){
-            return $this->db->insertCategory($data);
+        public function insertProduct($table,$data){
+            return $this->db->insert($table,$data);
+        }
+        public function aa(){
+            return 'mt';
         }
     }
 

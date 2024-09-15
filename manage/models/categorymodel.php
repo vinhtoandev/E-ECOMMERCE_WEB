@@ -6,8 +6,8 @@
         public function getAllCategory($table){
             return $this->db->select($table);
         }
-        public function insertCategory($data){
-            return $this->db->insertCategory($data);
+        public function insert($table,$data){
+            return $this->db->insert($table,$data);
         }
     }
 

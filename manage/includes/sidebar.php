@@ -92,7 +92,7 @@
             aria-controls="collapseThree"
           >
             <i class="fa-solid fa-table-list"></i>
-            <span>注文</span>
+            <span>product</span>
           </a>
           <div
             id="collapseThree"
@@ -102,8 +102,8 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Custom Components:</h6>
-              <a class="collapse-item" href="buttons.html">Buttons</a>
-              <a class="collapse-item" href="cards.html">Cards</a>
+              <a class="collapse-item" href="buttons.html">list</a>
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=products/addProduct">add</a>
             </div>
           </div>
         </li>

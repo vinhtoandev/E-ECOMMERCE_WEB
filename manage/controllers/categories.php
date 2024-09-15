@@ -16,17 +16,17 @@
         
         public function insertCategory(){
             
-            
+            $table = 'categories';
             $category = $this->load->model("categorymodel");
             $name = $_POST["name"];
             $slug = $_POST["slug"];
             $status = $_POST["status"];
-            $data['category'] = array(
+            $data['brand'] = array(
                 "name" => $name,
                 "slug" => $slug,
                 "status"=> $status
             );
-            $category->insertCategory($data);
+            $category->insert($table, $data);
             
         }
         public function addCategories(){

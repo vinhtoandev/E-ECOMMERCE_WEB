@@ -10,7 +10,7 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user" method="post" action="http://localhost:8080/e-commerce_web/manage/index.php?url=brands/insertBrand">
+                            <form class="user" method="post" action="http://localhost:8080/e-commerce_web/manage/index.php?url=brands/insert">
                 
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0 ">

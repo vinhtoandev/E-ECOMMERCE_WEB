@@ -13,8 +13,8 @@
             $statement->execute();
             return $statement->fetchAll();
         }
-        public function insertBrand($data){
-            return $this->db->insertBrand($data);
+        public function insert($table, $data){
+            return $this->db->insert($table, $data);
         }
     }
 
