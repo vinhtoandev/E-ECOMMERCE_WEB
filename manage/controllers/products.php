@@ -5,6 +5,7 @@
             parent::__construct();
         }
         
+        
         public function listProduct(){
         
             $table = "products";
@@ -75,9 +76,19 @@
             $product->insertProduct($table,$data);
             
         }
-        
-        public function addProduct(){
-            $this->load->view("addproducts");
+        public function update(){
+            $table = "brands";
+            $brandmodel = $this->load->model("brandmodel");
+            $data['brand'] = array(
+                "name" => "oppo",
+                "slug" => "op",
+                "status"=> "Active"
+            );
+            
+            $id = 41;
+            $cond = "id = $id";
+            $brandmodel->update($table,$data,$cond);
         }
+        
     }
 ?>

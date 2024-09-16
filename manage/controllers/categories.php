@@ -13,6 +13,12 @@
             $data['category'] = $brandmodel->getAllCategory($table);
             $this->load->view('listcats', $data);
         }
+        public function getBrandById($id){
+            $table = "categories";
+            $categorymodel = $this->load->model("categorymodel");
+            $data['category'] = $categorymodel->getBrandById($table, $id);
+            $this->load->view('listcats', $data);
+        }
         
         public function insertCategory(){
             
@@ -26,8 +32,7 @@
                 "slug" => $slug,
                 "status"=> $status
             );
-            $category->insert($table, $data);
-            
+            $category->insert($table, $data); 
         }
         public function addCategories(){
             $this->load->view("addcategories");

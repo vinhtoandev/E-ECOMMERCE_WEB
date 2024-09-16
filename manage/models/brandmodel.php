@@ -6,15 +6,17 @@
         public function getAllBrand($table){
             return $this->db->select($table);
         }
-        public function getBrandByID($table, $id){
-            $sql = "SELECT * FROM $table WHERE id =:id";
-            $statement = $this->db->prepare($sql);
-            $statement->bindParam(":id",$id);
-            $statement->execute();
-            return $statement->fetchAll();
+        public function getBrandById($table, $id){
+            return $this->db->selectById($table, $id);
         }
         public function insert($table, $data){
             return $this->db->insert($table, $data);
+        }
+        public function update($table, $data, $cond){
+            return $this->db->update($table, $data, $cond);
+        }
+        public function delete($table, $cond){
+            return $this->db->delete($table, $cond);
         }
     }
 

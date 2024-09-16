@@ -10,6 +10,14 @@
             $statement->execute();
             return $statement->fetchAll();
         }
+        public function selectById($table, $id){
+            $sql = "SELECT * from $table WHERE id = :id";
+            $statement = $this->prepare($sql);
+            $statement->bindParam("id", $id);
+            $statement->execute();
+            return $statement->fetchAll();
+        }
+       
 
         public function insert($table, $data) {
             $keys = implode(",", array_keys($data['brand']));
@@ -26,45 +34,26 @@
             return $statement->execute();
         }
 
-        // public function insertBrand($data){
-        //     $sql = "INSERT INTO brands(name, slug, status) VALUES(:name,:slug,:status)";
-        //     $name = $data['brand']['name'];
-        //     $slug = $data['brand']['slug'];;
-        //     $status = $data['brand']['status'];;
-        //     $statement = $this->prepare($sql);
-        //     $statement->bindParam("name", $name);
-        //     $statement->bindParam("slug", $slug);
-        //     $statement->bindParam("status", $status);
-
-        //     return $statement->execute();
-        // }
-        // public function insertCategory($data){
-        //     $sql = "INSERT INTO categories(name, slug, status) VALUES(:name,:slug,:status)";
-        //     $name = $data['category']['name'];
-        //     $slug = $data['category']['slug'];;
-        //     $status = $data['category']['status'];;
-        //     $statement = $this->prepare($sql);
-        //     $statement->bindParam("name", $name);
-        //     $statement->bindParam("slug", $slug);
-        //     $statement->bindParam("status", $status);
-
-        //     return $statement->execute();
-        // }
-        // public function insertProduct($data){
-        //     $sql = "INSERT INTO categories(name, slug, status) VALUES(:name,:slug,:status)";
-        //     $name = $data['category']['name'];
-        //     $slug = $data['category']['slug'];;
-        //     $status = $data['category']['status'];;
-        //     $statement = $this->prepare($sql);
-        //     $statement->bindParam("name", $name);
-        //     $statement->bindParam("slug", $slug);
-        //     $statement->bindParam("status", $status);
-
-        //     return $statement->execute();
-        // }
-        
-        
-
+        public function update($table, $data, $cond) {
+            $updateKeys = NULL;
+            foreach ($data['brand'] as $key => $value) {
+                $updateKeys .= "$key=:$key,";
+            }
+            $updateKeys = rtrim($updateKeys,",");
+            $sql = "UPDATE $table SET $updateKeys WHERE $cond";
+            $statement = $this->prepare($sql);
+            foreach($data['brand'] as $key => $value) { 
+                $statement->bindValue(":$key", $value);
+                
+                   
+            }
+            return $statement->execute();
+        }
+        public function delete($table, $cond) {
+            $sql = "DELETE FROM $table WHERE $cond";
+            $statement = $this->prepare($sql);
+            return $statement->execute();
+        }
 
     }
 

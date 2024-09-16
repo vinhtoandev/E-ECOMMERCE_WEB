@@ -9,8 +9,8 @@
         public function insertProduct($table,$data){
             return $this->db->insert($table,$data);
         }
-        public function aa(){
-            return 'mt';
+        public function update($table, $data, $cond){
+            return $this->db->update($table,$data,$cond);
         }
     }
 

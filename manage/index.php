@@ -12,12 +12,14 @@
     //     header("Location: $clean_url");
     //     exit();
     // }
-
-    require("libs/main.php");
-    require("libs/Load.php");
-    require("libs/DController.php");
-    require("libs/Database.php");
-    require("libs/DModel.php");
+    spl_autoload_register(function($class){
+      include_once("libs/".$class.".php");
+    }); 
+    // require("libs/main.php");
+    // require("libs/Load.php");
+    // require("libs/DController.php");
+    // require("libs/Database.php");
+    // require("libs/DModel.php");
     
 
 

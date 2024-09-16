@@ -17,8 +17,12 @@
             $this->load->view('listbrands', $data);
         }
         public function getBrandById($id){
-
+            $table = "brands";
+            $brandmodel = $this->load->model("brandmodel");
+            $data['brand'] = $brandmodel->getBrandById($table, $id);
+            $this->load->view('listbrands', $data);
         }
+        
         
         public function insert(){
             
@@ -35,8 +39,25 @@
             $brandmodel->insert($table,$data);
             
         }
-        public function addBrands(){
-            $this->load->view("addbrands");
+        public function update(){
+            $table = "brands";
+            $brandmodel = $this->load->model("brandmodel");
+            $data['brand'] = array(
+                "name" => "oppo",
+                "slug" => "op",
+                "status"=> "Active"
+            );
+            
+            $id = 41;
+            $cond = "id = $id";
+            $brandmodel->update($table,$data,$cond);
+        }
+        public function delete(){
+            $table = "brands";
+            $brandmodel = $this->load->model("brandmodel");
+            $id = 41;
+            $cond = "id = $id";
+            $brandmodel->delete($table, $cond);
         }
     }
 ?>
