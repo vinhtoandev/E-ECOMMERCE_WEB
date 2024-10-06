@@ -21,7 +21,9 @@
 
         public function insert($table, $data) {
             $keys = implode(",", array_keys($data['brand']));
+            echo $keys;
             $values = ":" . implode(", :", array_keys($data['brand']));
+            echo $values;
             
             $sql = "INSERT INTO $table($keys) VALUES($values)";
             

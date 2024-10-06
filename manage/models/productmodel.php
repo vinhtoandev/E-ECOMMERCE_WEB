@@ -12,6 +12,9 @@
         public function update($table, $data, $cond){
             return $this->db->update($table,$data,$cond);
         }
+        public function delete($table, $cond){
+            return $this->db->delete($table, $cond);
+        }
     }
 
 

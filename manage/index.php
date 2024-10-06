@@ -1,6 +1,5 @@
 <?php 
    require("includes/header.php");
-
 ?>
 <?php
 // Kiểm tra nếu có dấu #

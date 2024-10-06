@@ -32,7 +32,7 @@
                             <th>category</th>
                             <th>brand</th>
                             <th>status</th>
-                            <th>hanhdong</th>
+                            <th>Operation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,7 +51,11 @@
                                     }?> 
                                     </td>
                                     <td><?=$value['status']?></td>
-                                    <td>dell/edit</td>
+                                    <td>
+                                        <a class="btn btn-danger">EDIT</a> 
+                                        <a class="btn btn-danger" href="http://localhost:8080/e-commerce_web/manage/index.php?url=products/delete/<?=$value['id']?>"> DELETE</a>
+                                    </td>
+                                    
                                 </tr>
                     <?php
                         }

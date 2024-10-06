@@ -30,6 +30,15 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <style>
+      #dataTable td {
+        font-weight: 500; /* Để chữ trong ô bảng in đậm */
+      }
+      #dataTable tr {
+        font-weight: bold;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    </style>
   </head>
 
   <body id="page-top">

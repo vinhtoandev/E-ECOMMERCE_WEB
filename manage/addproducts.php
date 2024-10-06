@@ -57,8 +57,7 @@
                                     $categorymodel = new categorymodel();
                                     $result1 = $categorymodel->getAllCategory('categories');
                                     $result2 = $brandmodel->getAllBrand('brands');
-                                    
-                                    
+                                                                        
                     ?> 
                     <div class="form-group">
                         <label class="form-label">Danh mục:</label>

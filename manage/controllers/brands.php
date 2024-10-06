@@ -52,12 +52,13 @@
             $cond = "id = $id";
             $brandmodel->update($table,$data,$cond);
         }
-        public function delete(){
+        public function delete($id){
             $table = "brands";
             $brandmodel = $this->load->model("brandmodel");
-            $id = 41;
             $cond = "id = $id";
             $brandmodel->delete($table, $cond);
+            $data['brand'] = $brandmodel->getAllBrand($table);
+            $this->load->view('listbrands', $data);
         }
     }
 ?>

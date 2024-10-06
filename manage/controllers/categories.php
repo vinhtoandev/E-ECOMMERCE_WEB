@@ -37,5 +37,20 @@
         public function addCategories(){
             $this->load->view("addcategories");
         }
+        public function nhap(){
+
+                                include("models/categorymodel.php");
+                                $categorymodel = new categorymodel();
+                                $result1 = $categorymodel->getAllCategory('categories');                                    
+                            
+                            
+                                foreach ($result1 as $value) {
+                                    
+                                   echo $value['name'] ;
+
+                               
+                                }
+                                
+        }
     }
 ?>

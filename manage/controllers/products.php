@@ -89,6 +89,16 @@
             $cond = "id = $id";
             $brandmodel->update($table,$data,$cond);
         }
-        
+        public function addProduct(){
+            $this->load->view("addproducts");
+        }
+        public function delete($id){
+            $table = "products";
+            $productmodel = $this->load->model("productmodel");
+            $cond = "id = $id";
+            $productmodel->delete($table, $cond);
+            $data['product'] = $productmodel->getAllProduct($table);
+            $this->load->view('listproduct', $data);
+        }
     }
 ?>
