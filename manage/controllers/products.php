@@ -105,7 +105,7 @@
             $productmodel = $this->load->model("productmodel");
             $cond = "category_id = 3";
             $data['product'] = $productmodel->getProductByCats($table, $cond);
-            $this->load->view('', $data);
+            $this->load->view('productShop', $data);
         }
     }
 ?>

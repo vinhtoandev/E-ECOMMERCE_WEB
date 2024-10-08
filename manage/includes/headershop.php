@@ -24,43 +24,7 @@
 </head>
 
 <body>
-<?php
 
-    spl_autoload_register(function($class){
-      include_once("libs/".$class.".php");
-    }); 
-    
-    
-
-
-    $url = isset($_GET['url']) ? $_GET['url'] : NULL;
-    if ($url != NULL) {
-       $url = rtrim($url,'/');
-       $url = explode('/', filter_var($url, FILTER_SANITIZE_URL));
-    }else{
-      unset($url);
-    }
-    if (isset($url[0])) {
-      // echo $url[0].'.php';
-      include_once('controllers/'. $url[0] .'.php');
-      $ctlr = new $url[0]();
-      if(isset($url[2])) {
-        $ctlr->{$url[1]}($url[2]);
-      }else{
-        if(isset($url[1])){
-          $ctlr->{$url[1]}();
-        }
-        else{
-
-        }
-      }
-    }
-    else{
-      
-      
-    }
-    
-?>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -127,42 +91,7 @@
 
     <!-- Header Section Begin -->
     <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="header__top__left">
-                            <ul>
-                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                                <li>Free Shipping for all Order of $99</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="header__top__right">
-                            <div class="header__top__right__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                            </div>
-                            <div class="header__top__right__language">
-                                <img src="img/language.png" alt="">
-                                <div>English</div>
-                                <span class="arrow_carrot-down"></span>
-                                <ul>
-                                    <li><a href="#">Spanis</a></li>
-                                    <li><a href="#">English</a></li>
-                                </ul>
-                            </div>
-                            <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
@@ -174,6 +103,8 @@
                     <nav class="header__menu">
                         <ul>
                             <li><a href="./index.html">Home</a></li>
+                          
+                            
                             <li class="active"><a href="./shop-grid.html">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
