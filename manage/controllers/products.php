@@ -100,5 +100,12 @@
             $data['product'] = $productmodel->getAllProduct($table);
             $this->load->view('listproduct', $data);
         }
+        public function getProductByCats(){
+            $table = "products";
+            $productmodel = $this->load->model("productmodel");
+            $cond = "category_id = 3";
+            $data['product'] = $productmodel->getProductByCats($table, $cond);
+            $this->load->view('', $data);
+        }
     }
 ?>

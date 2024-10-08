@@ -15,6 +15,9 @@
         public function delete($table, $cond){
             return $this->db->delete($table, $cond);
         }
+        public function getProductByCats($table, $cond){
+            return $this->db->selectByCondition($table, $cond);
+        }
     }
 
 
