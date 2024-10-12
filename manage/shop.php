@@ -6,27 +6,15 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Product Section Begin -->
+
+
 <?php
-    require("t1.php");
-?>
-        <?php
-// Kiểm tra nếu có dấu #
-    // if (strpos($_SERVER['REQUEST_URI'], '#') !== false) {
-    //     // Lấy URL không chứa dấu #
-    //     $clean_url = strtok($_SERVER["REQUEST_URI"], '#');
-        
-    //     // Chuyển hướng đến URL mới không có dấu #
-    //     header("Location: $clean_url");
-    //     exit();
-    // }
+
+
     spl_autoload_register(function($class){
       include_once("libs/".$class.".php");
     }); 
-    // require("libs/main.php");
-    // require("libs/Load.php");
-    // require("libs/DController.php");
-    // require("libs/Database.php");
-    // require("libs/DModel.php");
+   
     
 
 

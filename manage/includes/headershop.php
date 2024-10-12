@@ -105,7 +105,14 @@
                             <li><a href="./index.html">Home</a></li>
                           
                             
-                            <li class="active"><a href="./shop-grid.html">Shop</a></li>
+                            <li class="active"><a href="./shop-grid.html">Shop</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">PC</a></li>
+                                    <li><a href="./shoping-cart.html">Laptop</a></li>
+                                    <li><a href="./checkout.html">Apple Watch</a></li>
+                                    <li><a href="./blog-details.html">Phone</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
