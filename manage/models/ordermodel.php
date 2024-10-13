@@ -1,12 +1,12 @@
 <?php
-    class productmodel extends DModel{
+    class ordermodel extends DModel{
         public function __construct(){
             parent::__construct();
         }
-        public function getAllProduct($table){
+        public function getAllOrder($table){
             return $this->db->select($table);
         }
-        public function insertProduct($table,$data){
+        public function insertOrder($table,$data){
             return $this->db->insert($table,$data);
         }
         public function update($table, $data, $cond){
@@ -15,11 +15,11 @@
         public function delete($table, $cond){
             return $this->db->delete($table, $cond);
         }
-        public function getProductByCats($table, $cond){
+        public function getOrderDetailByID($table, $cond){
             return $this->db->selectByCondition($table, $cond);
         }
-        public function getProductByID($table, $id){
-            return $this->db->selectById($table, $id);
+        public function getGioHang($order_id){
+            return $this->db->getGioHang($order_id);
         }
     }
 

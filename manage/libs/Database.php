@@ -19,7 +19,7 @@
         }
         public function selectByCondition($table, $cond){
             $sql = "SELECT * from $table WHERE $cond";
-       
+            echo $sql;
             $statement = $this->prepare($sql);
             $statement->execute();
             return $statement->fetchAll();
@@ -62,6 +62,16 @@
             $sql = "DELETE FROM $table WHERE $cond";
             $statement = $this->prepare($sql);
             return $statement->execute();
+        }
+
+        public function getGioHang($order_id){
+            $sql = "SELECT order_details.order_id,order_details.price, order_details.qty, order_details.total, products.name, products.images
+                    FROM order_details 
+                    INNER JOIN products ON order_details.product_id=products.id
+                    WHERE order_id = $order_id;";
+            $statement = $this->prepare($sql);
+            $statement->execute();
+            return $statement->fetchAll();        
         }
 
     }

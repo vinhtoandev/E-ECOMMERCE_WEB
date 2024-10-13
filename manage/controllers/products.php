@@ -107,7 +107,12 @@
             $data['product'] = $productmodel->getProductByCats($table, $cond);
             // $data['product'] = $productmodel->getAllProduct($table);
             $this->load->view('productShop', $data);
-            
+        }
+        public function getProductById($id){
+            $table = "products";
+            $productmodel = $this->load->model("productmodel");
+            $data['product'] = $productmodel->getProductById($table, $id);
+            $this->load->view('productDetails', $data);
         }
     }
 ?>
