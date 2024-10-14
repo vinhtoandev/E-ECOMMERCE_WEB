@@ -1,6 +1,6 @@
       <!-- Sidebar -->
       <ul
-        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        class="navbar-nav bg-dark sidebar sidebar-dark accordion"
         id="accordionSidebar"
       >
         <!-- Sidebar - Brand -->
@@ -11,25 +11,20 @@
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
           </div>
-          <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+          <div class="sidebar-brand-text mx-3">Admin </div>
         </a>
 
         <!-- Divider -->
         <hr class="sidebar-divider my-0" />
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a
-          >
-        </li>
+        
 
         <!-- Divider -->
         <hr class="sidebar-divider" />
 
         <!-- Heading -->
-        <div class="sidebar-heading">Interface</div>
+       
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
@@ -67,7 +62,7 @@
             aria-controls="collapseTwo"
           >
             <i class="fa-solid fa-calendar"></i>
-            <span>Category</span>
+            <span>CATEGOTY</span>
           </a>
           <div
             id="collapseTwo"
@@ -77,8 +72,8 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=categories/listCategory">list</a>
-              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=categories/addCategories">add</a>
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=categories/listCategory">LIST</a>
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=categories/addCategories">ADD</a>
             </div>
           </div>
         </li>
@@ -92,7 +87,7 @@
             aria-controls="collapseThree"
           >
             <i class="fa-solid fa-table-list"></i>
-            <span>product</span>
+            <span>PRODUCT</span>
           </a>
           <div
             id="collapseThree"
@@ -101,9 +96,8 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Custom Components:</h6>
-              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=products/listproduct">list</a>
-              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=products/addProduct">add</a>
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=products/listproduct" style="font-weight: bold;">LIST</a>
+              <a class="collapse-item" href="http://localhost:8080/e-commerce_web/manage/index.php?url=products/addProduct" style="font-weight: bold;">ADD</a>
             </div>
           </div>
         </li>
@@ -117,7 +111,7 @@
             aria-controls="collapseTwo"
           >
             <i class="fa-solid fa-user"></i>
-            <span>ユーザー</span>
+            <span>USER</span>
           </a>
           <div
             id="collapseTwo"
@@ -132,46 +126,40 @@
             </div>
           </div>
         </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider" />
-
-        <!-- Heading -->
-        <div class="sidebar-heading">Addons</div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
           <a
             class="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapsePages"
+            data-target="#collapseFive"
             aria-expanded="true"
-            aria-controls="collapsePages"
+            aria-controls="collapseFive"
           >
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
+          <i class="fas fa-fw fa-table"></i>
+            <span>ORDER</span>
           </a>
           <div
-            id="collapsePages"
+            id="collapseFive"
             class="collapse"
-            aria-labelledby="headingPages"
+            aria-labelledby="headingFive"
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Login Screens:</h6>
-              <a class="collapse-item" href="login.html">Login</a>
-              <a class="collapse-item" href="register.html">Register</a>
-              <a class="collapse-item" href="forgot-password.html"
-                >Forgot Password</a
-              >
-              <div class="collapse-divider"></div>
-              <h6 class="collapse-header">Other Pages:</h6>
-              <a class="collapse-item" href="404.html">404 Page</a>
-              <a class="collapse-item" href="blank.html">Blank Page</a>
+              <h6 class="collapse-header">Custom Components:</h6>
+              <a class="collapse-item" href="buttons.html">Buttons</a>
+              <a class="collapse-item" href="cards.html">Cards</a>
             </div>
           </div>
         </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Heading -->
+        
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
@@ -182,12 +170,7 @@
         </li>
 
         <!-- Nav Item - Tables -->
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a
-          >
-        </li>
+        
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block" />
