@@ -26,6 +26,11 @@
             $data['order'] = $ordermodel->getAllOrder($table);
             $this->load->view('listOrder', $data);
         }
+        public function getOrderDetail($order_id){
+            $ordermodel = $this->load->model("ordermodel");
+            $data['order'] = $ordermodel->getGioHang($order_id);
+            $this->load->view('vieworder',$data);
+        }
         
     }
 ?>

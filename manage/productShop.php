@@ -1,25 +1,27 @@
-<section class="product spad">
+
+<section>
+    
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-5">
-                    <!-- <div class="sidebar">
-                        <div class="sidebar__item">
-                            <h4>Department</h4>
-                            <ul>
-                            
-                            <?php 
-                                foreach ($result1 as $value) {
-                                    ?>
-                                    <li><a href="#"><?php echo $value['name'] ?></a></li>
-
-                            <?php        
-                                }
-                                    ?>
-                            </ul>
-                        </div>
-                    </div> -->
+                <div class="input-group" style="width: 500px; margin-bottom: 20px; margin-left: 600px;margin-top: 50px;">
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0 small"
+                        placeholder="Search for..."
+                        aria-label="Search"
+                        aria-describedby="basic-addon2"
+                      />
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          Search
+                        </button>
+                      </div>
                 </div>
-                <div class="col-lg-12 col-md-7">
+                
+                </div>
+                
+                <div class="col-lg-12 col-md-7">            
                 <div class="filter__item">
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
@@ -33,7 +35,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="filter__found">
-                                    <h6><span>16</span> Products found</h6>
+                                    <h6><span>6</span> Products found</h6>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3">
@@ -43,7 +45,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                </div>
+                    
                     
         <div class="row">
         <?php 

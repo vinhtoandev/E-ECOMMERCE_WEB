@@ -24,7 +24,7 @@
                                     <td><?=$value['created_at']?> 
                                     <td><?=$value['status']?></td>
                                     <td>
-                                        <a class="btn btn-danger">VIEW</a> 
+                                        <a class="btn btn-danger" href="http://localhost:8080/e-commerce_web/manage/index.php?url=orders/getOrderDetail/2">VIEW</a> 
                                     </td>
                                     
                                 </tr>

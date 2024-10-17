@@ -19,7 +19,7 @@
         }
         public function selectByCondition($table, $cond){
             $sql = "SELECT * from $table WHERE $cond";
-            echo $sql;
+            
             $statement = $this->prepare($sql);
             $statement->execute();
             return $statement->fetchAll();
